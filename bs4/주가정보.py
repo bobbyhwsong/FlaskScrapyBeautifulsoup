@@ -13,6 +13,7 @@ for code in codes:
     soup = BeautifulSoup(html, 'html.parser')
 
     today = soup.select_one('#chart_area > div.rate_info > div')
+    #today = soup.find_all(~~)
     price = today.select_one('.blind')
     prices.append(price.get_text())
 
